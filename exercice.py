@@ -43,10 +43,10 @@ def to_degrees(angle_rads: float) -> tuple:
 
     angle_degrees=math.degrees(angle_rads)
 
-    degrees=int(angle_degrees)
+    degrees=math.floor(angle_degrees)
 
-    minutes=int((angle_degrees-degrees)*60)
-    return degrees,minutes,int((angle_degrees-degrees-(minutes/60))*3600)
+    minutes=math.floor((angle_degrees-degrees)*60)
+    return degrees,minutes,math.floor((angle_degrees-degrees-(minutes/60))*3600)
 
 
 
